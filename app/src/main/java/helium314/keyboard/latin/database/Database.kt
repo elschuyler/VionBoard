@@ -12,6 +12,7 @@ class Database private constructor(context: Context, name: String = NAME) : SQLi
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(ClipboardDao.CREATE_TABLE)
         db.execSQL(ShortcutsDao.CREATE_TABLE)
+        db.execSQL(ProtectedEntriesDao.CREATE_TABLE)
         onUpgrade(db, 0, VERSION)
     }
 
@@ -22,11 +23,14 @@ class Database private constructor(context: Context, name: String = NAME) : SQLi
         if (oldVersion <= 2) {
             db.execSQL(ShortcutsDao.CREATE_TABLE)
         }
+        if (oldVersion <= 3) {
+            db.execSQL(ProtectedEntriesDao.CREATE_TABLE)
+        }
     }
 
     companion object {
         private val TAG = Database::class.java.simpleName
-        private const val VERSION = 3
+        private const val VERSION = 4
         const val NAME = "heliboard.db"
         private var instance: Database? = null
         fun getInstance(context: Context): Database {
