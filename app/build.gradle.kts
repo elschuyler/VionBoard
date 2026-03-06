@@ -121,6 +121,9 @@ dependencies {
     implementation("androidx.autofill:autofill:1.3.0")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
 
+    // biometric — for protected suggestions auth (Phase 5)
+    implementation("androidx.biometric:biometric:1.1.0")
+
     // kotlin
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
 
