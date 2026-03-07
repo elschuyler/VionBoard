@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    VionBoard additions — safe to add new strings here without touching strings.xml
+    SPDX-License-Identifier: GPL-3.0-only
+-->
+<resources>
+    <!-- Vault subtype label shown in the input method picker -->
+    <string name="subtype_vault" translatable="false">Vault (VionBoard)</string>
+    <!-- Vault panel UI strings -->
+    <string name="vault_search_hint">Search entries…</string>
+    <string name="vault_locked_title">Vault Locked</string>
+    <string name="vault_unlock_biometric">Unlock with Biometric</string>
+    <string name="vault_unlock_password">Enter master password</string>
+    <string name="vault_password_hint">Master password</string>
+    <string name="vault_unlock_button">Unlock</string>
+    <string name="vault_wrong_password">Wrong password</string>
+    <string name="vault_type_username">Username</string>
+    <string name="vault_type_password">Password</string>
+    <string name="vault_type_url">URL</string>
+    <string name="vault_no_file">No vault file set. Open VionBoard settings to configure.</string>
+    <string name="vault_no_entries">No matching entries</string>
+    <string name="vault_auto_fill">Auto-fill</string>
+    <string name="vault_settings_title">Vault Settings</string>
+    <string name="vault_settings_file">Vault file (.kdbx)</string>
+    <string name="vault_settings_file_summary">Tap to choose your KeePass database file</string>
+    <string name="vault_settings_auto_match">Auto-match entries by app</string>
+    <string name="vault_settings_auto_match_summary">Suggest entries matching the current app</string>
+    <string name="vault_settings_lock_on_screen_off">Lock on screen off</string>
+    <string name="vault_settings_lock_on_screen_off_summary">Clear session when screen turns off</string>
+</resources>
