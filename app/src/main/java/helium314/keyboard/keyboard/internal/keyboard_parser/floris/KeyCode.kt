@@ -30,9 +30,6 @@ object KeyCode {
     const val FN =                            -5
     const val FN_LOCK =                       -6
     const val DELETE =                        -7
-    //const val DELETE_WORD =                   -8
-    //const val FORWARD_DELETE =                -9
-    //const val FORWARD_DELETE_WORD =          -10
     const val SHIFT =                        -11
     const val CAPS_LOCK =                    -13
 
@@ -48,47 +45,29 @@ object KeyCode {
     const val CLIPBOARD_COPY =               -31
     const val CLIPBOARD_CUT =                -32
     const val CLIPBOARD_PASTE =              -33
-    const val CLIPBOARD_SELECT_WORD =        -34 // CLIPBOARD_SELECT
+    const val CLIPBOARD_SELECT_WORD =        -34
     const val CLIPBOARD_SELECT_ALL =         -35
     const val CLIPBOARD_CLEAR_HISTORY =      -36
-    //const val CLIPBOARD_CLEAR_FULL_HISTORY = -37
-    //const val CLIPBOARD_CLEAR_PRIMARY_CLIP = -38
 
-    //const val COMPACT_LAYOUT_TO_LEFT =      -111
-    //const val COMPACT_LAYOUT_TO_RIGHT =     -112
     const val SPLIT_LAYOUT =                -113
-    //const val MERGE_LAYOUT =                -114
 
     const val UNDO =                        -131
     const val REDO =                        -132
 
-    const val ALPHA =                       -201 // VIEW_CHARACTERS
-    const val SYMBOL =                      -202 // VIEW_SYMBOLS
-    //const val VIEW_SYMBOLS2 =               -203
-    //const val VIEW_NUMERIC =                -204
-    const val NUMPAD =                      -205 // VIEW_NUMERIC_ADVANCED
+    const val ALPHA =                       -201
+    const val SYMBOL =                      -202
+    const val NUMPAD =                      -205
     const val VIEW_PHONE =                  -206
     const val VIEW_PHONE2 =                 -207
 
     const val IME_UI_MODE_TEXT =            -211
-    const val EMOJI =                       -212 // IME_UI_MODE_MEDIA
-    const val CLIPBOARD =                   -213 // IME_UI_MODE_CLIPBOARD
+    const val EMOJI =                       -212
+    const val CLIPBOARD =                   -213
 
-    //const val SYSTEM_INPUT_METHOD_PICKER =  -221
-    //const val SYSTEM_PREV_INPUT_METHOD =    -222
-    //const val SYSTEM_NEXT_INPUT_METHOD =    -223
-    //const val IME_SUBTYPE_PICKER =          -224
-    //const val IME_PREV_SUBTYPE =            -225
-    //const val IME_NEXT_SUBTYPE =            -226
     const val LANGUAGE_SWITCH =             -227
-
-    //const val IME_SHOW_UI =                 -231
     const val IME_HIDE_UI =                 -232
     const val VOICE_INPUT =                 -233
 
-    //const val TOGGLE_SMARTBAR_VISIBILITY =  -241
-    //const val TOGGLE_ACTIONS_OVERFLOW =     -242
-    //const val TOGGLE_ACTIONS_EDITOR =       -243
     const val TOGGLE_INCOGNITO_MODE =       -244
     const val TOGGLE_AUTOCORRECT =          -245
 
@@ -104,36 +83,21 @@ object KeyCode {
     const val CURRENCY_SLOT_6 =             -806
 
     const val MULTIPLE_CODE_POINTS =        -902
-    //const val DRAG_MARKER =                 -991
-    //const val NOOP =                        -999
-
-    //const val CHAR_WIDTH_SWITCHER =        -9701
-    //const val CHAR_WIDTH_FULL =            -9702
-    //const val CHAR_WIDTH_HALF =            -9703
-
-    //const val KANA_SMALL =                 12307
-    //const val KANA_SWITCHER =              -9710
-    //const val KANA_HIRA =                  -9711
-    //const val KANA_KATA =                  -9712
-    //const val KANA_HALF_KATA =             -9713
 
     const val KESHIDA =                     1600
-    const val ZWNJ =                        8204 // 0x200C, named HALF_SPACE in FlorisBoard
-    const val ZWJ =                         8205 // 0x200D
+    const val ZWNJ =                        8204
+    const val ZWJ =                         8205
 
     const val CJK_SPACE =                  12288
 
     // heliboard only codes
     const val SYMBOL_ALPHA =              -10001
     const val TOGGLE_ONE_HANDED_MODE =    -10002
-    const val TOGGLE_ONE_HANDED_MODE_2 =  -10003 // does the same as TOGGLE_ONE_HANDED_MODE (used to be start & stop)
+    const val TOGGLE_ONE_HANDED_MODE_2 =  -10003
     const val SWITCH_ONE_HANDED_MODE =    -10004
     const val SHIFT_ENTER =               -10005
     const val ACTION_NEXT =               -10006
     const val ACTION_PREVIOUS =           -10007
-    // Code value representing the code is not specified. This is "old", and treated different than UNSPECIFIED.
-    // A main difference is that such a NOT_SPECIFIED code results in the key being disabled (see Key.mEnabled).
-    // Used for Key.Spacer and Key.OptionalAttributes and as dummy KeyCode in some places
     const val NOT_SPECIFIED =             -10008
     const val CLIPBOARD_COPY_ALL =        -10009
     const val PAGE_UP =                   -10010
@@ -167,8 +131,6 @@ object KeyCode {
     const val F11 =                       -10038
     const val F12 =                       -10039
     const val BACK =                      -10040
-    //const val SELECT_LEFT =               -10041
-    //const val SELECT_RIGHT =              -10042
     const val TIMESTAMP =                 -10043
     const val CTRL_LEFT =                 -10044
     const val CTRL_RIGHT =                -10045
@@ -178,7 +140,8 @@ object KeyCode {
     const val META_RIGHT =                -10049
     const val EMOJI_SEARCH =              -10050
     const val INLINE_EMOJI_SEARCH_DONE =  -10051
-
+    // VionBoard: opens the KeePass vault panel
+    const val VION_VAULT =                -10052
 
     // Intents
     const val SEND_INTENT_ONE =            -20000
@@ -200,13 +163,15 @@ object KeyCode {
         ACTION_NEXT, ACTION_PREVIOUS, NOT_SPECIFIED, CLIPBOARD_COPY_ALL, WORD_LEFT, WORD_RIGHT, PAGE_UP,
         PAGE_DOWN, META, TAB, ESCAPE, INSERT, SLEEP, MEDIA_PLAY, MEDIA_PAUSE, MEDIA_PLAY_PAUSE, MEDIA_NEXT,
         MEDIA_PREVIOUS, VOL_UP, VOL_DOWN, MUTE, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, BACK,
-        TIMESTAMP, CTRL_LEFT, CTRL_RIGHT, ALT_LEFT, ALT_RIGHT, META_LEFT, META_RIGHT, SEND_INTENT_ONE, SEND_INTENT_TWO,
-        SEND_INTENT_THREE, EMOJI_SEARCH, INLINE_EMOJI_SEARCH_DONE, META_LOCK
+        TIMESTAMP, CTRL_LEFT, CTRL_RIGHT, ALT_LEFT, ALT_RIGHT, META_LEFT, META_RIGHT, SEND_INTENT_ONE,
+        SEND_INTENT_TWO, SEND_INTENT_THREE, EMOJI_SEARCH, INLINE_EMOJI_SEARCH_DONE, META_LOCK,
+        // VionBoard
+        VION_VAULT
         -> this
 
         // conversion
         IME_UI_MODE_TEXT -> ALPHA
-        VIEW_PHONE -> ALPHA // phone keyboard is treated like alphabet, just with different layout
+        VIEW_PHONE -> ALPHA
         VIEW_PHONE2 -> SYMBOL
         TOGGLE_ONE_HANDED_MODE_2 -> TOGGLE_ONE_HANDED_MODE
 
@@ -214,17 +179,11 @@ object KeyCode {
     }
 
     fun Int.isModifier() = when (this) {
-        SHIFT, SYMBOL_ALPHA, ALPHA, SYMBOL, NUMPAD, FN, CTRL, CTRL_LEFT, CTRL_RIGHT, CTRL_LOCK, ALT, ALT_LEFT, ALT_RIGHT,
-        ALT_LOCK, META, META_LEFT, META_RIGHT, META_LOCK, -> true
+        SHIFT, SYMBOL_ALPHA, ALPHA, SYMBOL, NUMPAD, FN, CTRL, CTRL_LEFT, CTRL_RIGHT, CTRL_LOCK, ALT, ALT_LEFT,
+        ALT_RIGHT, ALT_LOCK, META, META_LEFT, META_RIGHT, META_LOCK, -> true
         else -> false
     }
 
-    // todo: there are many more keys, see near https://developer.android.com/reference/android/view/KeyEvent#KEYCODE_0
-    /**
-     *  Convert an internal keyCode to a KeyEvent.KEYCODE_<xxx>.
-     *  Positive codes are passed through, unknown negative codes result in KeyEvent.KEYCODE_UNKNOWN.
-     *  To be uses for fake hardware key press.
-     */
     @JvmStatic fun keyCodeToKeyEventCode(keyCode: Int) = when (keyCode) {
         ARROW_UP -> KeyEvent.KEYCODE_DPAD_UP
         ARROW_RIGHT -> KeyEvent.KEYCODE_DPAD_RIGHT
@@ -262,12 +221,6 @@ object KeyCode {
         else -> if (keyCode < 0) KeyEvent.KEYCODE_UNKNOWN else keyCode
     }
 
-    // todo: there are many more keys, see near https://developer.android.com/reference/android/view/KeyEvent#KEYCODE_0
-    /**
-     *  Convert a codePoint to a KeyEvent.KEYCODE_<xxx>.
-     *  Fallback to KeyEvent.KEYCODE_UNKNOWN.
-     *  To be uses for fake hardware key press.
-     */
     @JvmStatic fun codePointToKeyEventCode(codePoint: Int): Int = when (codePoint.toChar().uppercaseChar()) {
         '/' -> KeyEvent.KEYCODE_SLASH
         '\\' -> KeyEvent.KEYCODE_BACKSLASH
