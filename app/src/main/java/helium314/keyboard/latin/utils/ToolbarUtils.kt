@@ -88,6 +88,8 @@ fun getCodeForToolbarKey(key: ToolbarKey) = Settings.getInstance().getCustomTool
     TIMESTAMP -> KeyCode.TIMESTAMP
     EMOJI_SEARCH -> KeyCode.EMOJI_SEARCH
     VION_VAULT -> KeyCode.VION_VAULT
+    VION_SNIPPETS -> KeyCode.VION_SNIPPETS
+    VION_SHORTCUTS -> KeyCode.VION_SHORTCUTS
 }
 
 fun getCodeForToolbarKeyLongClick(key: ToolbarKey) = Settings.getInstance().getCustomToolbarLongpressCode(key) ?: when (key) {
@@ -110,6 +112,8 @@ fun getCodeForToolbarKeyLongClick(key: ToolbarKey) = Settings.getInstance().getC
     TIMESTAMP -> KeyCode.UNSPECIFIED
     EMOJI_SEARCH -> KeyCode.UNSPECIFIED
     VION_VAULT -> KeyCode.UNSPECIFIED
+    VION_SNIPPETS -> KeyCode.UNSPECIFIED
+    VION_SHORTCUTS -> KeyCode.UNSPECIFIED
     else -> KeyCode.UNSPECIFIED
 }
 
@@ -119,7 +123,7 @@ enum class ToolbarKey {
     INCOGNITO, AUTOCORRECT, CLEAR_CLIPBOARD, CLOSE_HISTORY, EMOJI, LEFT, RIGHT, UP, DOWN, WORD_LEFT, WORD_RIGHT,
     PAGE_UP, PAGE_DOWN, FULL_LEFT, FULL_RIGHT, PAGE_START, PAGE_END,
     // VionBoard extensions
-    TIMESTAMP, EMOJI_SEARCH, VION_VAULT
+    TIMESTAMP, EMOJI_SEARCH, VION_VAULT, VION_SNIPPETS, VION_SHORTCUTS
 }
 
 enum class ToolbarMode {
