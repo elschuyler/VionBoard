@@ -147,8 +147,11 @@ class KeyboardIconsSet private constructor() {
                     ToolbarKey.SPLIT -> R.drawable.ic_ime_switcher
                     ToolbarKey.TIMESTAMP -> R.drawable.ic_undo
                     ToolbarKey.EMOJI_SEARCH -> R.drawable.sym_keyboard_smiley_holo
-                    // VionBoard: vault key — reuse clipboard icon as placeholder
                     ToolbarKey.VION_VAULT -> R.drawable.sym_keyboard_clipboard_holo
+                    // Snippets: reuse copy icon (code/paste feel)
+                    ToolbarKey.VION_SNIPPETS -> R.drawable.sym_keyboard_copy
+                    // Shortcuts: reuse settings icon
+                    ToolbarKey.VION_SHORTCUTS -> R.drawable.sym_keyboard_settings_holo
                 })
             }
         } }
@@ -164,7 +167,7 @@ class KeyboardIconsSet private constructor() {
             NAME_SEND_KEY to                    R.drawable.sym_keyboard_send_lxx,
             NAME_DONE_KEY to                    R.drawable.sym_keyboard_done_lxx,
             NAME_NEXT_KEY to                    R.drawable.ic_arrow_right,
-            NAME_PREVIOUS_KEY to                R.drawable.ic_arrow_left,
+            NAME_PREVIOUS_KEY to               R.drawable.ic_arrow_left,
             NAME_TAB_KEY to                     R.drawable.sym_keyboard_tab_lxx,
             NAME_SPACE_KEY_FOR_NUMBER_LAYOUT to R.drawable.sym_keyboard_space_lxx,
             NAME_SHORTCUT_KEY_DISABLED to       R.drawable.sym_keyboard_voice_off_lxx,
@@ -211,8 +214,9 @@ class KeyboardIconsSet private constructor() {
                     ToolbarKey.SPLIT -> R.drawable.ic_ime_switcher
                     ToolbarKey.TIMESTAMP -> R.drawable.ic_undo
                     ToolbarKey.EMOJI_SEARCH -> R.drawable.sym_keyboard_smiley_lxx
-                    // VionBoard: vault key — reuse clipboard icon as placeholder
                     ToolbarKey.VION_VAULT -> R.drawable.sym_keyboard_clipboard_lxx
+                    ToolbarKey.VION_SNIPPETS -> R.drawable.sym_keyboard_copy
+                    ToolbarKey.VION_SHORTCUTS -> R.drawable.sym_keyboard_settings_lxx
                 })
             }
         } }
@@ -228,7 +232,7 @@ class KeyboardIconsSet private constructor() {
             NAME_SEND_KEY to                    R.drawable.sym_keyboard_send_rounded,
             NAME_DONE_KEY to                    R.drawable.sym_keyboard_done_rounded,
             NAME_NEXT_KEY to                    R.drawable.ic_arrow_right_rounded,
-            NAME_PREVIOUS_KEY to                R.drawable.ic_arrow_left_rounded,
+            NAME_PREVIOUS_KEY to               R.drawable.ic_arrow_left_rounded,
             NAME_TAB_KEY to                     R.drawable.sym_keyboard_tab_rounded,
             NAME_SPACE_KEY_FOR_NUMBER_LAYOUT to R.drawable.sym_keyboard_space_rounded,
             NAME_SHORTCUT_KEY_DISABLED to       R.drawable.sym_keyboard_voice_off_rounded,
@@ -275,8 +279,9 @@ class KeyboardIconsSet private constructor() {
                     ToolbarKey.SPLIT -> R.drawable.ic_ime_switcher
                     ToolbarKey.TIMESTAMP -> R.drawable.ic_undo_rounded
                     ToolbarKey.EMOJI_SEARCH -> R.drawable.sym_keyboard_smiley_rounded
-                    // VionBoard: vault key — reuse clipboard icon as placeholder
                     ToolbarKey.VION_VAULT -> R.drawable.sym_keyboard_clipboard_rounded
+                    ToolbarKey.VION_SNIPPETS -> R.drawable.sym_keyboard_copy_rounded
+                    ToolbarKey.VION_SHORTCUTS -> R.drawable.sym_keyboard_settings_rounded
                 })
             }
         } }
