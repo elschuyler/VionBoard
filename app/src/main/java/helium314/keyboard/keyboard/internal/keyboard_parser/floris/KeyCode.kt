@@ -142,6 +142,10 @@ object KeyCode {
     const val INLINE_EMOJI_SEARCH_DONE =  -10051
     // VionBoard: opens the KeePass vault panel
     const val VION_VAULT =                -10052
+    // VionBoard: opens the coding snippets panel
+    const val VION_SNIPPETS =             -10053
+    // VionBoard: opens the desktop shortcuts panel
+    const val VION_SHORTCUTS =            -10054
 
     // Intents
     const val SEND_INTENT_ONE =            -20000
@@ -166,7 +170,7 @@ object KeyCode {
         TIMESTAMP, CTRL_LEFT, CTRL_RIGHT, ALT_LEFT, ALT_RIGHT, META_LEFT, META_RIGHT, SEND_INTENT_ONE,
         SEND_INTENT_TWO, SEND_INTENT_THREE, EMOJI_SEARCH, INLINE_EMOJI_SEARCH_DONE, META_LOCK,
         // VionBoard
-        VION_VAULT
+        VION_VAULT, VION_SNIPPETS, VION_SHORTCUTS
         -> this
 
         // conversion
