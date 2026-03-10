@@ -84,6 +84,7 @@ import helium314.keyboard.latin.utils.SubtypeSettings;
 import helium314.keyboard.latin.utils.SubtypeState;
 import helium314.keyboard.latin.utils.ToolbarMode;
 import helium314.keyboard.latin.VionVaultActivity;
+import helium314.keyboard.latin.VionSnippetsActivity;
 import helium314.keyboard.settings.SettingsActivity2;
 import kotlin.Unit;
 
@@ -1724,6 +1725,11 @@ public class LatinIME extends InputMethodService implements
                           .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK));
     }
 
+    public void launchSnippetsActivity() {
+        startActivity(new Intent().setClass(this, VionSnippetsActivity.class)
+                          .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK));
+    }
+
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (intent != null && EmojiSearchActivity.EMOJI_SEARCH_DONE_ACTION.equals(intent.getAction()) && ! isEmojiSearch()) {
@@ -1743,6 +1749,14 @@ public class LatinIME extends InputMethodService implements
         if (intent != null && VionVaultActivity.VAULT_DONE_ACTION.equals(intent.getAction())) {
             if (intent.hasExtra(VionVaultActivity.VAULT_TEXT_KEY)) {
                 onTextInput(intent.getStringExtra(VionVaultActivity.VAULT_TEXT_KEY));
+            }
+            stopSelf(startId);
+            return START_NOT_STICKY;
+        }
+
+        if (intent != null && VionSnippetsActivity.SNIPPETS_DONE_ACTION.equals(intent.getAction())) {
+            if (intent.hasExtra(VionSnippetsActivity.SNIPPETS_TEXT_KEY)) {
+                onTextInput(intent.getStringExtra(VionSnippetsActivity.SNIPPETS_TEXT_KEY));
             }
             stopSelf(startId);
             return START_NOT_STICKY;
