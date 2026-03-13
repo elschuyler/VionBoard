@@ -43,6 +43,7 @@ fun MainSettingsScreen(
     onClickLayouts: () -> Unit,
     onClickDictionaries: () -> Unit,
     onClickVionBackup: () -> Unit,
+    onClickVionVaultSettings: () -> Unit,
     onClickBack: () -> Unit,
 ) {
     SearchSettingsScreen(
@@ -108,6 +109,13 @@ fun MainSettingsScreen(
                     onClick = onClickAdvanced,
                     icon = R.drawable.ic_settings_advanced
                 ) { NextScreenIcon() }
+                // VionBoard: KeePass vault settings
+                Preference(
+                    name = "KeePass / Vault",
+                    description = "Vault file, auto-lock, clipboard clear, biometric",
+                    onClick = onClickVionVaultSettings,
+                    icon = R.drawable.ic_settings_advanced
+                ) { NextScreenIcon() }
                 // VionBoard: encrypted backup and restore
                 Preference(
                     name = "VionBoard Backup",
@@ -131,7 +139,7 @@ private fun PreviewScreen() {
     initPreview(LocalContext.current)
     Theme(previewDark) {
         Surface {
-            MainSettingsScreen({}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {})
+            MainSettingsScreen({}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {})
         }
     }
 }
