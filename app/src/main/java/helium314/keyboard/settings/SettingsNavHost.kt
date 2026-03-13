@@ -33,6 +33,7 @@ import helium314.keyboard.settings.screens.SubtypeScreen
 import helium314.keyboard.settings.screens.TextCorrectionScreen
 import helium314.keyboard.settings.screens.ToolbarScreen
 import helium314.keyboard.settings.screens.VionBackupScreen
+import helium314.keyboard.settings.screens.VionVaultSettingsScreen
 import helium314.keyboard.settings.screens.gesturedata.GestureDataScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -79,6 +80,7 @@ fun SettingsNavHost(
                 onClickLayouts = { navController.navigate(SettingsDestination.Layouts) },
                 onClickDictionaries = { navController.navigate(SettingsDestination.Dictionaries) },
                 onClickVionBackup = { navController.navigate(SettingsDestination.VionBackup) },
+                onClickVionVaultSettings = { navController.navigate(SettingsDestination.VionVaultSettings) },
                 onClickBack = ::goBack,
             )
         }
@@ -141,6 +143,9 @@ fun SettingsNavHost(
         composable(SettingsDestination.VionBackup) {
             VionBackupScreen(onClickBack = ::goBack)
         }
+        composable(SettingsDestination.VionVaultSettings) {
+            VionVaultSettingsScreen(onClickBack = ::goBack)
+        }
         composable(SettingsDestination.Subtype + "{subtype}") {
             SubtypeScreen(initialSubtype = it.arguments?.getString("subtype")!!.toSettingsSubtype(), onClickBack = ::goBack)
         }
@@ -170,6 +175,7 @@ object SettingsDestination {
     const val Layouts = "layouts"
     const val Dictionaries = "dictionaries"
     const val VionBackup = "vion_backup"
+    const val VionVaultSettings = "vion_vault_settings"
     val navTarget = MutableStateFlow(Settings)
 
     private val navScope = CoroutineScope(Dispatchers.Default)
